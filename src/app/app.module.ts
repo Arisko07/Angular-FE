@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { NavigationComponent } from './header/navigation/navigation.component';
 import { BackgroundImageDirective } from './custom-directives/background-image.directive';
+import { NavigationService } from './custom-service/navigation.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { BackgroundImageDirective } from './custom-directives/background-image.d
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [NavigationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
