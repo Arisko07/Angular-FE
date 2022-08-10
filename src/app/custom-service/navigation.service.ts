@@ -6,7 +6,38 @@ import { EventEmitter, Injectable } from '@angular/core';
 export class NavigationService {
   pageSelected = new EventEmitter<null>();
   private currentPage: string = 'home';
+  private links: Array<any> = [
+    {
+      name: 'codeAndTheory',
+      link: 'https://www.codeandtheory.com/'
+    },
+    {
+      name: 'git',
+      link: 'https://github.com/Arisko07/Angular-FE',
+      icon: 'gitwhite.png'
+    },
+    {
+      name: 'facebook',
+      link: 'https://facebook.com',
+      icon: 'faceIcon.png'
+    },
+    {
+      name: 'linkedIn',
+      link: 'https://www.linkedin.com/',
+      icon: 'linked.png'
+    },
+    {
+      name: 'reddit',
+      link: 'https://www.reddit.com/r/Genshin_Impact/',
+      icon: 'reddit-logo.png'
+    },
+    
+  ]
   constructor() { }
+
+  getLinks(){
+    return this.links;
+  }
 
   getCurrentPage(){
     return this.currentPage;
