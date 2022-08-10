@@ -24,15 +24,31 @@ a{
     color: var(--primary-color);
     text-decoration: underline;
 }
+.navigation__button{
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
+    height: 22px;
+    width: 22px;
+    padding: 2px;
+    border: 0;
+    border-radius: 99px;
+    background: transparent;
+    transition: background-color 0.5s ease;
+}
+.navigation__button img{height: 100%;width: 100%;}
 @media screen and (max-width: 750px) {
     .navigation{
-        position: absolute;    
-        height: calc(100vh - 64px);        
-        top: 64px;
+        position: fixed;    
+        height: 100vh;
+        top: 0;
         left: 0;
         transition: transform 0.2s ease-in;
         transform: translateX(-100%);
         background-color: darksalmon;
+        z-index: 99;
     }
     .navigation__list{        
         align-items: flex-start;
@@ -44,7 +60,10 @@ a{
         margin-bottom: 15px;
     }
     .navigation__button{
-        display: flex;
+        display: block;
+    }
+    .navigation__button:hover{
+        background-color: var(--primary-color);
     }
     .open{
         transform: translateX(0);
