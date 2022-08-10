@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationService } from '../custom-service/navigation.service';
+import { StaticMessageService } from '../custom-service/static-message.service';
 
 @Component({
   selector: 'app-footer',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-
-  constructor() { }
+  links: Array<any> = [];
+  disclaimerMessage: string = '';
+  constructor(private navigation: NavigationService, private staticMessage: StaticMessageService) { }
 
   ngOnInit(): void {
+    this.links = this.navigation.getLinks().filter(link => link.name !== 'codeAndTheory');
+    this.disclaimerMessage = this.staticMessage.getDisclaimer();    
   }
-
 }

@@ -1,11 +1,14 @@
 <footer class="footer">
     <div class="footer__links">
-        <ul>
-            <li><a></a></li>
-            <li><a></a></li>
-            <li><a></a></li>
-            <li><a></a></li>
+        <ul class="footer__links-list">
+            <li *ngFor="let link of links" class="footer__links-item">
+                <a [class]="link.name" [href]="link.link">
+                    <img class="footer__links-image" [src]="'../../assets/img/' + link.icon">
+                </a>
+            </li>
         </ul>
     </div>
-    <div class="footer__disclaimer"></div>
+    <div class="footer__disclaimer">
+        <p>{{ disclaimerMessage }}</p>
+    </div>
 </footer>
