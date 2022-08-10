@@ -8,11 +8,12 @@ import { NavigationService } from './custom-service/navigation.service';
 })
 export class AppComponent implements OnInit{
   title = 'Angular-FE';
-  currentPage = 'home';
+  currentPage: string = '';
 
   constructor(private navigation: NavigationService){}
 
   ngOnInit(){
+    this.currentPage = this.navigation.getCurrentPage();
     this.navigation.pageSelected.subscribe( () => { this.currentPage = this.navigation.getCurrentPage(); } )
   }
 }
