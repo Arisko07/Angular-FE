@@ -8,6 +8,9 @@ import { BackgroundImageDirective } from './custom-directives/background-image.d
 import { NavigationService } from './custom-service/navigation.service';
 import { FooterComponent } from './footer/footer.component';
 import { StaticMessageService } from './custom-service/static-message.service';
+import { HomeComponent } from './home/home.component';
+import { HotNewsComponent } from './home/hot-news/hot-news.component';
+import { ArticleService } from './custom-service/article.service';
 
 @NgModule({
   declarations: [
@@ -15,14 +18,17 @@ import { StaticMessageService } from './custom-service/static-message.service';
     HeaderComponent,
     NavigationComponent,
     BackgroundImageDirective,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    HotNewsComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [
     NavigationService,
-    StaticMessageService
+    StaticMessageService,
+    ArticleService
   ],
   bootstrap: [AppComponent]
 })
