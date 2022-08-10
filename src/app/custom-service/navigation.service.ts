@@ -5,7 +5,7 @@ import { EventEmitter, Injectable } from '@angular/core';
 })
 export class NavigationService {
   pageSelected = new EventEmitter<null>();
-  private currentPage: string = 'aboutUs';
+  private currentPage: string = 'home';
   constructor() { }
 
   getCurrentPage(){
