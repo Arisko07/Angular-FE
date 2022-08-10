@@ -7,6 +7,7 @@ import { NavigationComponent } from './header/navigation/navigation.component';
 import { BackgroundImageDirective } from './custom-directives/background-image.directive';
 import { NavigationService } from './custom-service/navigation.service';
 import { FooterComponent } from './footer/footer.component';
+import { StaticMessageService } from './custom-service/static-message.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,10 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule
   ],
-  providers: [NavigationService],
+  providers: [
+    NavigationService,
+    StaticMessageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
