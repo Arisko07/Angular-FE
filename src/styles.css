@@ -3,6 +3,7 @@
     --primary-font: 'Nunito';
     --primary-color: white;
     --secondary-color: black;
+    --color-orange: orange;
 }
 body{
     margin: 0;
