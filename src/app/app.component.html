@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container" [appBackgroundImage]="'../../assets/img/shooting.jpg'">
   <app-header></app-header>
-  <div class="main-content">
-    <div *ngIf="currentPage === 'home'" class="home"></div>
+  <div class="main-content">    
+    <app-home *ngIf="currentPage === 'home'" class="home"></app-home>    
     <div *ngIf="currentPage === 'article'" class="article"></div>
     <div *ngIf="currentPage === 'aboutUs'" class="aboutUs"></div>
   </div>
