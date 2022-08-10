@@ -15,10 +15,27 @@
     border-radius: 5px;
     background-color: transparent;
     opacity: 0;
-    transition: opacity 0.2s ease-in 0.2s;
+    transition: opacity 0.2s ease 0.2s, background-color 0.2s ease;
 }
 .header__navigation-button:hover{
     background-color: white;
+}
+.header__button{
+    font-size: 12px;
+    padding: 8px 12px;
+    margin: 0 40px 0 auto;
+    background-color: transparent;    
+    border: 3px solid transparent;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: var(--secondary-color)
+}
+.header__button h1{
+    margin: 0;
+}
+.header__button:hover{
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    background-color: var(--secondary-color);
 }
 @media screen and (max-width: 750px) {
     .header__navigation-button{
