@@ -1,7 +1,7 @@
 <section class="navigation side-navigation" [ngClass]="{open: navOpen === true}">    
     <ul class="navigation__list">
-        <li class="navigation__list-item"><a href="#" (click)="onPageSelect('home')">Home</a></li>
-        <li class="navigation__list-item"><a href="#" (click)="onPageSelect('article')">Articles</a></li>
-        <li class="navigation__list-item"><a href="#" (click)="onPageSelect('aboutUs')">About Us</a></li>
+        <li class="navigation__list-item"><a [ngClass]="{active: selectedPage === 'home'}" href="#" (click)="onPageSelect('home')">Home</a></li>
+        <li class="navigation__list-item"><a [ngClass]="{active: selectedPage === 'article'}" href="#" (click)="onPageSelect('article')">Articles</a></li>
+        <li class="navigation__list-item"><a [ngClass]="{active: selectedPage === 'aboutUs'}" href="#" (click)="onPageSelect('aboutUs')">About Us</a></li>
     </ul>
 </section>

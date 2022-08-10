@@ -1,6 +1,8 @@
-<div>
+<div class="container">
   <app-header></app-header>
-  <div *ngIf="currentPage === 'home'" class="home"></div>
-  <div *ngIf="currentPage === 'article'" class="article"></div>
-  <div *ngIf="currentPage === 'aboutUs'" class="aboutUs"></div>
+  <div class="main-content">
+    <div *ngIf="currentPage === 'home'" class="home"></div>
+    <div *ngIf="currentPage === 'article'" class="article"></div>
+    <div *ngIf="currentPage === 'aboutUs'" class="aboutUs"></div>
+  </div>
 </div>
