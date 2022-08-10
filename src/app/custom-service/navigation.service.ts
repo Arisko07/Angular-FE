@@ -5,7 +5,9 @@ import { EventEmitter, Injectable } from '@angular/core';
 })
 export class NavigationService {
   pageSelected = new EventEmitter<null>();
+  navToggle = new EventEmitter<null>();
   private currentPage: string = 'home';
+  private navState: boolean = false;
   private links: Array<any> = [
     {
       name: 'codeAndTheory',
@@ -42,7 +44,12 @@ export class NavigationService {
   getCurrentPage(){
     return this.currentPage;
   }
-  
+  getNavState(){
+    return this.navState;
+  }
+  setNavState(state: boolean){
+    this.navState = state;
+  }
   setCurrentPage(selectedPage: string){
     this.currentPage = selectedPage;
     this.pageSelected.emit();
