@@ -12,14 +12,18 @@
     font-weight: bold; 
     transition: transform 0.2s ease-in, color 0.2s ease-in;
 }
-.navigation__list-item a{
-    text-decoration: none;    
+a{    
+    text-decoration: none;
+    transition: color 0.5s ease;
 }
 .navigation__list-item a:hover{
     color: var(--primary-color);
     text-decoration: underline;
 }
-
+.active{
+    color: var(--primary-color);
+    text-decoration: underline;
+}
 @media screen and (max-width: 750px) {
     .navigation{
         position: absolute;    
@@ -37,7 +41,7 @@
         padding: 40px;        
     }
     .navigation__list-item{
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
     .navigation__button{
         display: flex;
