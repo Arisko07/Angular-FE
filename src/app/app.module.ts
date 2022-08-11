@@ -13,6 +13,7 @@ import { HotNewsComponent } from './home/hot-news/hot-news.component';
 import { ArticleService } from './custom-service/article.service';
 import { LoadingComponent } from './loading/loading.component';
 import { NationBannerComponent } from './home/nation-banner/nation-banner.component';
+import { ArticleComponent } from './article/article.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NationBannerComponent } from './home/nation-banner/nation-banner.compon
     HomeComponent,
     HotNewsComponent,
     LoadingComponent,
-    NationBannerComponent
+    NationBannerComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule
