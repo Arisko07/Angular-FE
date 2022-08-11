@@ -1,0 +1,9 @@
+<section class="nation-banner">
+    <ul class="nation-banner__list">
+        <li class="nation-banner__list-item" *ngFor="let nation of nationBanner">
+            <div class="nation-banner__list-background" style="background-image: url(../../assets/img/mons.jpg);" [style.background-image]="'url(../../assets/img/' + nation.background + ')'"></div>
+            <h1 class="nation-banner__list-header">{{ nation.header }}</h1>
+            <img class="nation-banner__list-image" [src]="'../../assets/img/' + nation.image">
+        </li>
+    </ul>
+</section>

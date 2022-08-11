@@ -16,7 +16,8 @@ export class HeaderComponent implements OnInit {
     const links = this.navigation.getLinks();    
     this.codeLink = links.find( link => link.name === 'codeAndTheory').link;
   }
-  onNavClick(){
-    this.navState = !this.navState;
+  onNavClick(){    
+    this.navigation.setNavState(!this.navigation.getNavState());
+    this.navigation.navToggle.emit();    
   }
 }
