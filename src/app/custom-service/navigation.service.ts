@@ -6,8 +6,10 @@ import { EventEmitter, Injectable } from '@angular/core';
 export class NavigationService {
   pageSelected = new EventEmitter<null>();
   navToggle = new EventEmitter<null>();
+  loaderState = new EventEmitter<boolean>();
+
   private currentPage: string = 'home';
-  private navState: boolean = false;
+  private navState: boolean = false;  
   private links: Array<any> = [
     {
       name: 'codeAndTheory',
