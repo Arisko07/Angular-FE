@@ -11,6 +11,8 @@ import { StaticMessageService } from './custom-service/static-message.service';
 import { HomeComponent } from './home/home.component';
 import { HotNewsComponent } from './home/hot-news/hot-news.component';
 import { ArticleService } from './custom-service/article.service';
+import { LoadingComponent } from './loading/loading.component';
+import { NationBannerComponent } from './home/nation-banner/nation-banner.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ArticleService } from './custom-service/article.service';
     BackgroundImageDirective,
     FooterComponent,
     HomeComponent,
-    HotNewsComponent
+    HotNewsComponent,
+    LoadingComponent,
+    NationBannerComponent
   ],
   imports: [
     BrowserModule
