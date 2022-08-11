@@ -1,10 +1,28 @@
 import { Injectable } from '@angular/core';
 import { HotNews } from '../home/hot-news.model';
+import { NationBanner } from '../home/nation-banner.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ArticleService {
+  private nationBanner: NationBanner[] = [
+    new NationBanner(
+      'Mondstadt',
+      'mons.jpg',
+      'jean.png'
+    ),
+    new NationBanner(
+      'Liyue',
+      'liyue.jpg',
+      'xiao.png'
+    ),
+    new NationBanner(
+      'Inazuma',
+      'inazuma.jpg',
+      'ayaka.png'
+    )
+  ]
   private hotNews: HotNews[] = [
     new HotNews(
       'Genshin Impact EP - The Iridescent Waves',
@@ -32,5 +50,8 @@ export class ArticleService {
 
   getHowNews(){
     return this.hotNews;
+  }
+  getNationBanner(){
+    return this.nationBanner;
   }
 }
