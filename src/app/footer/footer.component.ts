@@ -13,7 +13,7 @@ export class FooterComponent implements OnInit {
   constructor(private navigation: NavigationService, private staticMessage: StaticMessageService) { }
 
   ngOnInit(): void {
-    this.links = this.navigation.getLinks().filter(link => link.name !== 'codeAndTheory');
+    this.links = this.navigation.getLinks().filter(link => link.type === 'footer');
     this.disclaimerMessage = this.staticMessage.getDisclaimer();    
   }
 }
