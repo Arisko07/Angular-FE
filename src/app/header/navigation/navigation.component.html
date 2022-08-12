@@ -4,5 +4,6 @@
         <li class="navigation__list-item"><a [ngClass]="{active: selectedPage === 'home'}" href="#" (click)="onPageSelect('home')">Home</a></li>
         <li class="navigation__list-item"><a [ngClass]="{active: selectedPage === 'article'}" href="#" (click)="onPageSelect('article')">Articles</a></li>
         <li class="navigation__list-item"><a [ngClass]="{active: selectedPage === 'aboutUs'}" href="#" (click)="onPageSelect('aboutUs')">About Us</a></li>
+        <li class="navigation__list-item" *ngIf="selectedPage == 'detail'"><a [ngClass]="{active: selectedPage === 'detail'}" href="#">Details</a></li>
     </ul>
 </section>

@@ -1,3 +1,5 @@
+import { Skill } from "./skill.model";
+
 export class Article{
     constructor(
         public id: string,
@@ -6,7 +8,9 @@ export class Article{
         public image: {thumbnail: string, portrait: string},
         public header: string,
         public source: string,
-        public description: string,
+        public videoRef: string,
+        public description: string,        
+        public skill: Skill[]
     ){
         this.id = id;
         this.type = type;
@@ -14,6 +18,7 @@ export class Article{
         this.image = image;
         this.header = header;
         this.source = source;
-        this.description = description;        
+        this.description = description;
+        this.skill = skill;    
     }
 }

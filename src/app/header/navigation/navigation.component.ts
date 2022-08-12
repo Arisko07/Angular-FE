@@ -13,7 +13,10 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit(): void {
     this.selectedPage = this.navigation.getCurrentPage();
-    this.navigation.navToggle.subscribe( () => this.navOpen = this.navigation.getNavState() )
+    this.navigation.navToggle.subscribe( () => this.navOpen = this.navigation.getNavState() );
+    this.navigation.loaderState.subscribe( () => {      
+      this.selectedPage = this.navigation.getCurrentPage();
+    })
   }
   
   onPageSelect(selectedPage: string){
@@ -21,9 +24,9 @@ export class NavigationComponent implements OnInit {
     this.navigation.loaderState.emit(true);
 
     setTimeout(()=>{
-      this.navigation.loaderState.emit(false);
       this.navigation.setCurrentPage(selectedPage);
-      this.selectedPage = selectedPage;
+      this.navigation.loaderState.emit(false);      
+      this.selectedPage = this.navigation.getCurrentPage();
     }, 1000)    
 
   }

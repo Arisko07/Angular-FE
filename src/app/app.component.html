@@ -5,6 +5,7 @@
     <app-home *ngIf="currentPage === 'home'" class="home"></app-home>    
     <div *ngIf="currentPage === 'article'" class="article"></div>
     <div *ngIf="currentPage === 'aboutUs'" class="aboutUs"></div>
-  </div>
+    <app-detail *ngIf="currentPage === 'detail'" class="detail"></app-detail>
+  </div>  
   <app-footer></app-footer>
 </div>

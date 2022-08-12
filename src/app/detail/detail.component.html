@@ -1,0 +1,15 @@
+<section class="detail">
+    <div class="detail-content">
+        <app-detail-content></app-detail-content>
+        <app-detail-side-content></app-detail-side-content>
+    </div>
+    <div class="detail-table">
+        <app-detail-table></app-detail-table>
+    </div>
+    <section class="detail-video">
+        <h1>{{ videoHeader }}</h1>
+        <div class="detail-video__wrapper">
+            <iframe style="width: 100%;height: 100%;position: absolute;" [src]=" videoRef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        </div>
+    </section>
+</section>
