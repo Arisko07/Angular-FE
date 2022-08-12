@@ -14,6 +14,10 @@ import { ArticleService } from './custom-service/article.service';
 import { LoadingComponent } from './loading/loading.component';
 import { NationBannerComponent } from './home/nation-banner/nation-banner.component';
 import { ArticleComponent } from './article/article.component';
+import { DetailComponent } from './detail/detail.component';
+import { DetailContentComponent } from './detail/detail-content/detail-content.component';
+import { DetailSideContentComponent } from './detail/detail-side-content/detail-side-content.component';
+import { DetailTableComponent } from './detail/detail-table/detail-table.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { ArticleComponent } from './article/article.component';
     HotNewsComponent,
     LoadingComponent,
     NationBannerComponent,
-    ArticleComponent
+    ArticleComponent,
+    DetailComponent,
+    DetailContentComponent,
+    DetailSideContentComponent,
+    DetailTableComponent
   ],
   imports: [
     BrowserModule
@@ -34,7 +42,7 @@ import { ArticleComponent } from './article/article.component';
   providers: [
     NavigationService,
     StaticMessageService,
-    ArticleService
+    ArticleService,
   ],
   bootstrap: [AppComponent]
 })
