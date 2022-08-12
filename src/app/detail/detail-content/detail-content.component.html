@@ -1,0 +1,9 @@
+<section class="detail-content">
+    <div class="detail-content__left">
+        <h1 class="detail-content__header">{{ details.header }}</h1>
+        <p class="detail-content__description" [innerHTML] = "details.description"></p>        
+    </div>
+    <figure class="detail-content__image">
+        <img [src]="'../../assets/img/' + details.image.portrait">
+    </figure>
+</section>
