@@ -11,4 +11,7 @@
             </a>
         </li>
     </ul>
+    <div class="article__pagination" *ngIf="selectedPage === 'article'">
+        <button *ngFor="let button of paginationButton" [ngClass]="{active: currentPage === button}" (click)="onPagination(button)">{{ button + 1}}</button>        
+    </div>
 </section>
