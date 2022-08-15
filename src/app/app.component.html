@@ -3,8 +3,8 @@
   <app-header></app-header>
   <div class="main-content">    
     <app-home *ngIf="currentPage === 'home'" class="home"></app-home>    
-    <div *ngIf="currentPage === 'article'" class="article"></div>
-    <div *ngIf="currentPage === 'aboutUs'" class="aboutUs"></div>
+    <app-article *ngIf="currentPage === 'article'" class="article"></app-article>
+    <app-page-not-found *ngIf="currentPage === 'aboutUs'" class="aboutUs"></app-page-not-found>
     <app-detail *ngIf="currentPage === 'detail'" class="detail"></app-detail>
   </div>  
   <app-footer></app-footer>
