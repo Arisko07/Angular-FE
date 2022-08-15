@@ -1,0 +1,59 @@
+.not-found{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    margin-left: 60px;
+    transform: rotate(-90deg);
+}
+.container .gear{
+    width: 100px;
+    height: 100px;
+}
+h1{
+    font-size: 2em;
+    color: whitesmoke;
+    text-shadow: 3px 3px 5px black;
+}
+.gear-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.gear-2{
+    position: absolute;
+    top: 66px;
+    left: 60px;
+}
+.gear-3{
+    position: absolute;
+    top: 133px;
+    left: 0px;
+}
+.rotate {
+    animation: rotation 2s infinite linear;
+}
+.rotate-inverse {
+    animation: rotation-inverse 2s infinite linear;
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+@keyframes rotation-inverse {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-359deg);
+    }
+}
