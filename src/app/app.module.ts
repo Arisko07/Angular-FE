@@ -18,6 +18,7 @@ import { DetailComponent } from './detail/detail.component';
 import { DetailContentComponent } from './detail/detail-content/detail-content.component';
 import { DetailSideContentComponent } from './detail/detail-side-content/detail-side-content.component';
 import { DetailTableComponent } from './detail/detail-table/detail-table.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { DetailTableComponent } from './detail/detail-table/detail-table.compone
     DetailComponent,
     DetailContentComponent,
     DetailSideContentComponent,
-    DetailTableComponent
+    DetailTableComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule
