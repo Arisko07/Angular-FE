@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ArticleService } from '../custom-service/article.service';
 import { NavigationService } from '../custom-service/navigation.service';
 import { Article } from './article.model';
@@ -13,9 +14,10 @@ export class ArticleComponent implements OnInit {
   selectedPage: string = '';
   paginationButton: Array<number> = [];
   currentPage: number = 0;
-  constructor( private article: ArticleService, private navigation: NavigationService) { }
+  constructor( private article: ArticleService, private navigation: NavigationService, private router: Router) { }
 
-  ngOnInit(): void {    
+  ngOnInit(): void {        
+    console.log(this.router.url)
     this.selectedPage = this.navigation.getCurrentPage();
     if(this.selectedPage==='article'){
       this.onPagination(0);

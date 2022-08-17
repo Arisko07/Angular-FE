@@ -22,9 +22,9 @@ export class NavigationComponent implements OnInit {
   onPageSelect(selectedPage: string){
 
     this.navigation.loaderState.emit(true);
-
-    setTimeout(()=>{
-      this.navigation.setCurrentPage(selectedPage);
+    this.navigation.setCurrentPage(selectedPage);
+    
+    setTimeout(()=>{      
       this.navigation.loaderState.emit(false);      
       this.selectedPage = this.navigation.getCurrentPage();
     }, 1000)    
