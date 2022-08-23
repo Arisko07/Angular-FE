@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticleService } from '../custom-service/article.service';
+import { NavigationService } from '../custom-service/navigation.service';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,11 @@ import { ArticleService } from '../custom-service/article.service';
 })
 export class HomeComponent implements OnInit {
   articleNavigation: string = 'events'
-  constructor(private article: ArticleService) { }
+  constructor(private article: ArticleService, private navigation: NavigationService) {
+    this.navigation.setCurrentPage('home'); 
+  }
 
-  ngOnInit(): void {    
+  ngOnInit(): void {       
   }
   onArticleFilter(filter: string){
     this.article.articleFilter.emit(filter);

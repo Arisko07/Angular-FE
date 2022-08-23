@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -20,6 +21,14 @@ import { DetailSideContentComponent } from './detail/detail-side-content/detail-
 import { DetailTableComponent } from './detail/detail-table/detail-table.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
+const routes: Routes = [
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: 'home', component: HomeComponent},
+  {path: 'article', component: ArticleComponent},
+  {path: 'aboutus', component: PageNotFoundComponent},
+  {path: 'article/detail', component: DetailComponent}
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +48,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     PageNotFoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [
     NavigationService,

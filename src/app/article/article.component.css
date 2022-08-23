@@ -1,6 +1,7 @@
 .article{
     padding-bottom: 50px;
 }
+.articleActive{padding-top: 50px;}
 .article__list{
     display: grid;
     grid-auto-rows: 1fr;
@@ -15,10 +16,10 @@
 .article__list-item a{
     display: grid;    
     height: 100%;
-    grid-template-columns: 2fr 6fr;
+    grid-template-columns: 3fr 6fr;
 }
 .character a{
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 2fr 6fr;
 }
 .character .article__list-image{
     object-fit: contain;
@@ -58,6 +59,9 @@
 .article__pagination .active{
     background-color: black;
     color: whitesmoke;
+}
+h1{
+    font-size: 18px;
 }
 @media screen and (max-width: 750px) {
     .character a,

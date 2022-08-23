@@ -1,9 +1,9 @@
 <section class="navigation side-navigation" [ngClass]="{open: navOpen === true}">
     <button class="navigation__button" (click)="onNavClose()"><img src="../../../assets/img/xmark-solid.svg"></button>
     <ul class="navigation__list">
-        <li class="navigation__list-item"><a [ngClass]="{active: selectedPage === 'home'}" href="#" (click)="onPageSelect('home')">Home</a></li>
-        <li class="navigation__list-item"><a [ngClass]="{active: selectedPage === 'article'}" href="#" (click)="onPageSelect('article')">Articles</a></li>
-        <li class="navigation__list-item"><a [ngClass]="{active: selectedPage === 'aboutUs'}" href="#" (click)="onPageSelect('aboutUs')">About Us</a></li>
+        <li class="navigation__list-item"><a [ngClass]="{active: selectedPage === 'home'}" href="#" (click)="onPageSelect('home')" routerLink="/home">Home</a></li>
+        <li class="navigation__list-item"><a [ngClass]="{active: selectedPage === 'article'}" href="#" (click)="onPageSelect('article')"  routerLink="/article">Articles</a></li>
+        <li class="navigation__list-item"><a [ngClass]="{active: selectedPage === 'aboutUs'}" href="#" (click)="onPageSelect('aboutUs')" routerLink="/aboutus">About Us</a></li>
         <li class="navigation__list-item" *ngIf="selectedPage == 'detail'"><a [ngClass]="{active: selectedPage === 'detail'}" href="#">Details</a></li>
     </ul>
 </section>
