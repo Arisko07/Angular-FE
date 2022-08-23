@@ -16,8 +16,12 @@ export class ArticleComponent implements OnInit {
   currentPage: number = 0;
   constructor( private article: ArticleService, private navigation: NavigationService, private router: Router) { }
 
-  ngOnInit(): void {        
-    console.log(this.router.url)
+  ngOnInit(): void {
+
+    const currentRoute:string = this.router.url;
+    console.log(currentRoute)
+    this.navigation.setCurrentPage(currentRoute.substring(currentRoute.lastIndexOf('/') + 1));
+    
     this.selectedPage = this.navigation.getCurrentPage();
     if(this.selectedPage==='article'){
       this.onPagination(0);
