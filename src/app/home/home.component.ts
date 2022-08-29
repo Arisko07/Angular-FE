@@ -8,7 +8,7 @@ import { NavigationService } from '../custom-service/navigation.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  articleNavigation: string = 'events'
+  articleNavigation: string = 'character'
   constructor(private article: ArticleService, private navigation: NavigationService) {
     this.navigation.setCurrentPage('home'); 
   }

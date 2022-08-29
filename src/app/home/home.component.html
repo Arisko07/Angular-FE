@@ -2,8 +2,8 @@
     <app-hot-news></app-hot-news>
     <app-nation-banner></app-nation-banner>
     <div class="button-group">
-        <button class="button-group__item" [ngClass]="{active: articleNavigation === 'events'}" (click)="onArticleFilter('events')">Events</button>
         <button class="button-group__item" [ngClass]="{active: articleNavigation === 'character'}" (click)="onArticleFilter('character')">Character</button>
+        <button class="button-group__item" [ngClass]="{active: articleNavigation === 'events'}" (click)="onArticleFilter('events')">Events</button>        
         <button class="button-group__item" [ngClass]="{active: articleNavigation === 'info'}" (click)="onArticleFilter('info')">Info</button>
     </div>
     <app-article></app-article>

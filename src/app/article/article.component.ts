@@ -26,7 +26,7 @@ export class ArticleComponent implements OnInit {
       this.onPagination(0);
     }
     else{
-      this.articles = this.article.getArticles().filter( article => article.type === 'events' );    
+      this.articles = this.article.getArticles().filter( article => article.type === 'character' );    
     }
     this.article.articleFilter.subscribe( filter => {
       this.articles = this.article.getArticles().filter( article => article.type === filter );
