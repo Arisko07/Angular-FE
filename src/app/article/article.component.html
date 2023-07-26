@@ -2,7 +2,7 @@
     <ul class="article__list">
         <li class="article__list-item" *ngFor="let article of articles" [ngClass]="{character: article.type === 'character'}">
             <a href="#" (click)="onArticleClick(article)" routerLink="/article/detail">
-                <img class="article__list-image" [src]="'../../assets/img/' + article.image.thumbnail">
+                <img class="article__list-image" [src]="'/../../assets/img/' + article.image.thumbnail">
                 <div class="article__list-content">
                     <h1 class="article__list-header">{{ article.header }}</h1>
                     <p class="article__list-description" [innerHTML] = "article.description"></p>
