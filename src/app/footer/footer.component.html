@@ -3,7 +3,7 @@
         <ul class="footer__links-list">
             <li *ngFor="let link of links" class="footer__links-item">
                 <a [class]="link.name" [href]="link.link">
-                    <img class="footer__links-image" [src]="'/assets/img/' + link.icon">
+                    <img class="footer__links-image" [src]="'assets/img/' + link.icon">
                 </a>
             </li>
         </ul>
