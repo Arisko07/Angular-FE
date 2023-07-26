@@ -1,0 +1,10 @@
+<section class="detail-table">
+    <article class="detail-table__content" *ngFor="let skill of skillList">
+        <div class="detail-table__header">
+            <img class="detail-table__header-image" [src]="'../../assets/img/'+ skill.icon">
+            <div class="detail-table__detail"> {{ skill.name }}</div>
+            <div class="detail-table__detail">{{ skill.type }}</div>
+        </div>
+        <div class="detail-table__description" [innerHTML] = "skill.description"></div>
+    </article>   
+</section>

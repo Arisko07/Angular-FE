@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+    --primary-font: 'Nunito';
+    --primary-color: white;
+    --secondary-color: black;
+    --color-orange: orange;
+}
+body{
+    margin: 0;
+    font-family: var(--primary-font);
+}
+a{
+    text-decoration: none;
+}
+ul,li{margin: 0;}
+ul{padding: 0;}
+li{list-style: none;}
